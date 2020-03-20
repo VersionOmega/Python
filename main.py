@@ -22,7 +22,6 @@ class Application:
                     self.running = False
                     pygame.quit()
                     sys.exit()
-                    print("penis2")
 
             pygame.display.update()
 
