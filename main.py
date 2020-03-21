@@ -52,7 +52,7 @@ class Application:
                     sys.exit()
 
             # Loop through the key:value pairs in 'self.planetDict'
-            for key, value in self.planetDict.items():
+            for planetName, planetObject in self.planetDict.items():
                 # Blit the planet on the window 'self.display'
                 value.display(self.display)
 
