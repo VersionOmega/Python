@@ -1,6 +1,7 @@
 # Import the 'pygame' module
 import pygame
 # Import the 'random' module
+import random
 
 # Create a new class called 'Planet'
 class Planet:
