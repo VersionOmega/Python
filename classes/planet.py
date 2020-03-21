@@ -2,6 +2,10 @@
 import pygame
 # Import the 'random' module
 import random
+# From the 'os' module, import 'listdir'
+from os import listdir
+# From the 'os.path' module, import 'isfile' and 'join'
+from os.path import isfile, join
 
 # Create a new class called 'Planet'
 class Planet:
@@ -19,12 +23,14 @@ class Planet:
         1.50:"Very large",
         1.75:"Extremely large"
     }
-        
+        # !-- The following was copied from https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
+        # Create a list of all files in the art folder
+        planetList = [f for f in listdir("art/") if isfile(join("art/", f))]
+        # !--
         self.name = "Planet"
         self.resize = random.choice([0.25,0.50,0.75,1.00,1.25,1.50,1.75])
         self.size = self.sizeDict[self.resize]
-        print(self.size)
-        self.imagePath = "art/PlanetX@1.00.png"
+        self.imagePath = "art/"+random.choice(planetList)
         self.displayImage = pygame.image.load(self.imagePath)
         self.imageWidth, self.imageHeight = self.displayImage.get_rect().width, self.displayImage.get_rect().height
         self.widthBorder = game.windowWidth - self.imageWidth

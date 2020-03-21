@@ -2,6 +2,8 @@
 import pygame
 # Import the 'sys' module
 import sys
+# Import the 'random' module
+import random
 # From the classes folder, import the module 'planet'
 from classes import planet
 
@@ -30,7 +32,7 @@ class Application:
         pygame.display.set_caption("Raize")
 
         # For 0 to 14
-        for i in range(15):
+        for i in range(random.randint(2,20)):
             # Format Planet{i} -> Planet0 and assign the value to the variable 'key'
             key = f"Planet{i}"
             # Assign the instance of Planet to the variable 'value
@@ -62,4 +64,4 @@ class Application:
 # If this Python file is run directly
 if __name__ == "__main__":
     # Instanciate a new Application class with the parameters '800' and '650'
-    game = Application(800, 650)
+    game = Application(1080, 960)
