@@ -11,6 +11,7 @@ class Application:
     # The constructor function
     def __init__(self, width, height):
         # Assign the value 'windowWidth' to the class variable 'width'
+        self.windowWidth = width
         # Assign the value 'True' to the class variable 'running'
         self.running = True
         # Assign an empty dictionary to the class variable 'planetDict'
