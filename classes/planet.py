@@ -1,3 +1,4 @@
+# Import the 'pygame' module
 import pygame
 
 class Planet:
