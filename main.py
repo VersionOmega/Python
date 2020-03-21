@@ -31,6 +31,9 @@ class Application:
         # Set the title of the window to 'Raize'
         pygame.display.set_caption("Raize")
 
+        self.backgroundImage = pygame.image.load("art/background.png")
+        self.backgroundImage = pygame.transform.scale(self.backgroundImage, (self.windowWidth, self.windowHeight))
+
         # For 0 to 14
         for i in range(random.randint(2,20)):
             # Format Planet{i} -> Planet0 and assign the value to the variable 'key'
@@ -42,6 +45,7 @@ class Application:
 
         # While 'self.running' is True
         while self.running:
+            self.display.blit(self.backgroundImage, (0,0))
             # For each event in the list 'pygame.event.get()'
             for event in pygame.event.get():
                 # If the close button is pressed in the window
@@ -57,6 +61,8 @@ class Application:
             for planetName, planetObject in self.planetDict.items():
                 # Blit the planet on the window 'self.display'
                 planetObject.blit(self.display)
+
+            
 
             # Update the pygame window
             pygame.display.update()
