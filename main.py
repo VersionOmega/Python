@@ -52,9 +52,9 @@ class Application:
                     sys.exit()
 
             # Loop through the key:value pairs in 'self.planetDict'
-            for planetName, planetObject in self.planetDict.items():
+            for key, value in self.planetDict.items():
                 # Blit the planet on the window 'self.display'
-                planetObject.display(self.display)
+                value.display(self.display)
 
             # Update the pygame window
             pygame.display.update()

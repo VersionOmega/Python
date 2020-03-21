@@ -4,6 +4,7 @@ class Planet:
 
     def __init__(self):
         
+        # Comment
         self.name = "Planet"
         self.size = "Size"
         self.imagePath = "art/planet.png"
