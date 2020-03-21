@@ -12,6 +12,8 @@ class Application:
     def __init__(self, width, height):
         # Assign the value 'windowWidth' to the class variable 'width'
         self.windowWidth = width
+        # Assign the value 'windowHeight' to the class variable 'height'
+        self.windowHeight = height
         # Assign the value 'True' to the class variable 'running'
         self.running = True
         # Assign an empty dictionary to the class variable 'planetDict'
@@ -20,9 +22,9 @@ class Application:
         # Initialise pygame
         pygame.init()
 
-        # Create a pygame window with the dimensions 'self.width' and 'self.height' and make the window hardware accelerated and double buffed
+        # Create a pygame window with the dimensions 'self.windowWidth' and 'self.windowHeight' and make the window hardware accelerated and double buffed
         self.display = pygame.display.set_mode(
-            (self.width, self.height), pygame.HWSURFACE | pygame.DOUBLEBUF)
+            (self.windowWidth, self.windowHeight), pygame.HWSURFACE | pygame.DOUBLEBUF)
 
         # Set the title of the window to 'Raize'
         pygame.display.set_caption("Raize")
@@ -32,7 +34,7 @@ class Application:
             # Format Planet{i} -> Planet0 and assign the value to the variable 'key'
             key = f"Planet{i}"
             # Assign the instance of Planet to the variable 'value
-            value = planet.Planet()
+            value = planet.Planet(self)
             # Add the variable 'value' to the dictionary 'self.planetDict' with the key 'key'
             self.planetDict[key] = value
 
@@ -52,7 +54,7 @@ class Application:
             # Loop through the key:value pairs in 'self.planetDict'
             for planetName, planetObject in self.planetDict.items():
                 # Blit the planet on the window 'self.display'
-                planetObject.display(self.display)
+                planetObject.blit(self.display)
 
             # Update the pygame window
             pygame.display.update()

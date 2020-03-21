@@ -7,12 +7,16 @@ import random
 class Planet:
 
     # The constructor function
-    def __init__(self):
+    def __init__(self, game):
         
         self.name = "Planet"
         self.size = "Size"
         self.imagePath = "art/planet.png"
-        self.blit = pygame.image.load(self.imagePath)
+        self.displayImage = pygame.image.load(self.imagePath)
+        self.imageWidth, self.imageHeight = self.displayImage.get_rect().width, self.displayImage.get_rect().height
+        self.widthBorder = game.windowWidth - self.imageWidth
+        self.heightBorder = game.windowHeight - self.imageHeight
+        self.pos = (random.randint(0,self.widthBorder),random.randint(0,self.heightBorder))
     
-    def display(self, surface):
-        surface.blit(self.blit, (0,0))
+    def blit(self, surface):
+        surface.blit(self.displayImage, self.pos)
