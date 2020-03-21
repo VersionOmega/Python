@@ -1,11 +1,12 @@
 # Import the 'pygame' module
 import pygame
 
+# Create a new class called 'Planet'
 class Planet:
 
+    # The constructor function
     def __init__(self):
         
-        # Comment
         self.name = "Planet"
         self.size = "Size"
         self.imagePath = "art/planet.png"

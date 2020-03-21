@@ -54,7 +54,7 @@ class Application:
             # Loop through the key:value pairs in 'self.planetDict'
             for planetName, planetObject in self.planetDict.items():
                 # Blit the planet on the window 'self.display'
-                value.display(self.display)
+                planetObject.display(self.display)
 
             # Update the pygame window
             pygame.display.update()
