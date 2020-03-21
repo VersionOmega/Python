@@ -6,6 +6,8 @@ import sys
 import random
 # From the classes folder, import the module 'planet'
 from classes import planet
+# From the scenes folder, import the module 'planet'
+from scenes import planetScene
 
 # Create a new class called 'Application'
 class Application:
@@ -30,6 +32,8 @@ class Application:
 
         # Set the title of the window to 'Raize'
         pygame.display.set_caption("Raize")
+
+        self.scene = planetScene
 
         self.backgroundImage = pygame.image.load("art/background.png")
         self.backgroundImage = pygame.transform.scale(self.backgroundImage, (self.windowWidth, self.windowHeight))
@@ -57,11 +61,8 @@ class Application:
                     # Exit the python script
                     sys.exit()
 
-            # Loop through the key:value pairs in 'self.planetDict'
-            for planetName, planetObject in self.planetDict.items():
-                # Blit the planet on the window 'self.display'
-                planetObject.blit(self.display)
-
+            
+            self.scene.play(self)
             
 
             # Update the pygame window
