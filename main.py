@@ -51,6 +51,11 @@ class Application:
                     # Exit the python script
                     sys.exit()
 
+            # Loop through the key:value pairs in 'self.planetDict'
+            for planetName, planetObject in self.planetDict.items():
+                # Blit the planet on the window 'self.display'
+                planetObject.display(self.display)
+
             # Update the pygame window
             pygame.display.update()
 
