@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.3" orientation="orthogonal" renderorder="left-down" compressionlevel="0" width="30" height="25" tilewidth="128" tileheight="128" infinite="0" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" source="../../RPG/Tiled/tilesets/terrain_atlas128.tsx"/>
+ <layer id="3" name="Tile Layer 1" width="30" height="25">
+  <data encoding="base64" compression="zstd">
+   KLUv/WC4Cl0NAJKGDRDABQExAEymJ5j0BPPnl7881cc1mi3UINQYHH3/nI1/NGpO4jsENQI1AJX7KGoQNYYkH61yZYErqBF3kpAA0QUAQUfPBRJgEgBAtRCJUa1ElvQDnOakauhGrwZDVl1EJHe733+pbsiQ4LbnDGOP5tw4DnnDq2nVTbcYzX01H0zaEHDbS/OVTnzhoDm4ST/049FnbZw/lVFzsetOe8FuH5gx3SP6Zuxf6Ka4VN1SE/c5bdyuaJgvOYq7/MeJc3+0lSd56mf2Az/pFJrRZd3hmzOBvUo3etovKrbPG4m+fj7+n06LiwdnsvgPlzJq4oveWomWRuebfK1p123iedkFHm7Ole2Z+k5op9+HrOQt6xid7Pfs6rPghQdc6pZRf/GNbwuYJW1nABINQrN45/dN+WrD5e7/ue2dk3BnkGZ//DZ8TW+i4YX4GfXfsrEv1+oWBlPOdZCSjYfdc8akN6/JFdkm3c06Am24lyfcIAMyGXjb8vNw14nED3vrBr80Rl+uj7e13GL7eNYJc13Pny1dZ8IHrwcNI3vquYOobm75x2B6vbreK/yn/H8=
+  </data>
+ </layer>
+ <layer id="4" name="Tile Layer 2" width="30" height="25">
+  <data encoding="base64" compression="zstd">
+   KLUv/WC4CoUEACKECxPQBQGgLrWQYMDvJYA1AUBx3CB607v0Gbi863lXoiLqYaiFSrxBFdTgzZvmRQMzIMBzDGEqxAQIxARm4kWxRyJ4GDOSYKX4g8vwQxLOhtldiiVwUBNwYCb+CRsNHAIFC3ENhyIdIGAgZ4ILA15y92ggDnKRQADj/MQ4z31wmXBN7UIx8HCfMJm6N1W1AQ==
+  </data>
+ </layer>
+</map>
