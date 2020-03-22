@@ -8,8 +8,8 @@ import random
 from classes import planet
 # From the scenes folder, import the module 'planetScene'
 from scenes import planetScene
-# From the methods folder, import the module 'planetSceneSetup'
-from methods import planetSceneSetup
+# From the methods folder, import the module 'loadingSceneSetup'
+from methods import loadingSceneSetup, planetSceneSetup
 
 # Create a new class called 'Application'
 class Application:
