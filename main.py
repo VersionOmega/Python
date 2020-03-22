@@ -6,8 +6,10 @@ import sys
 import random
 # From the classes folder, import the module 'planet'
 from classes import planet
-# From the scenes folder, import the module 'planet'
+# From the scenes folder, import the module 'planetScene'
 from scenes import planetScene
+# From the methods folder, import the module 'planetSceneSetup'
+from methods import planetSceneSetup
 
 # Create a new class called 'Application'
 class Application:
@@ -35,17 +37,7 @@ class Application:
 
         self.scene = planetScene
 
-        self.backgroundImage = pygame.image.load("art/background.png")
-        self.backgroundImage = pygame.transform.scale(self.backgroundImage, (self.windowWidth, self.windowHeight))
-
-        # For 0 to 14
-        for i in range(random.randint(2,20)):
-            # Format Planet{i} -> Planet0 and assign the value to the variable 'key'
-            key = f"Planet{i}"
-            # Assign the instance of Planet to the variable 'value
-            value = planet.Planet(self)
-            # Add the variable 'value' to the dictionary 'self.planetDict' with the key 'key'
-            self.planetDict[key] = value
+        planetSceneSetup.init(self)
 
         # While 'self.running' is True
         while self.running:
