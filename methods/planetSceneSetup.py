@@ -12,7 +12,7 @@ def init(game):
     game.backgroundImage = pygame.transform.scale(game.backgroundImage, (game.windowWidth, game.windowHeight))
 
     # Loop 2 to 20 times
-    for i in range(random.randint(2,2)):
+    for i in range(random.randint(2,20)):
         # Format Planet{i} -> Planet0 and assign the value to the variable 'key'
         key = f"Planet{i}"
         # Assign the instance of Planet to the variable 'value

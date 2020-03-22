@@ -39,7 +39,7 @@ class Planet:
         # Load that path using pygame
         self.displayImage = pygame.image.load(self.imagePath)
         # Scale the image by the scale factor previously determined
-        self.displayImage = pygame.transform.scale(self.displayImage,(int(self.imageWidth*self.resize),int(self.imageHeight*self.resize)))
+        self.displayImage = pygame.transform.scale(self.displayImage,(int(self.displayImage.get_rect().width*self.resize),int(self.displayImage.get_rect().height*self.resize)))
         # Get the width and height of the image file used 
         self.imageWidth, self.imageHeight = self.displayImage.get_rect().width, self.displayImage.get_rect().height
         # Get the maximum X coordinate that the image could be displayed at
